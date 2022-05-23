@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block contenido %}
+    <h1>Insertar Servicios</h1>
+    <!-- para renderizar el mensaje si guardo o no-->
+     {% if msg %}
+     <h2>{{msg}}</h2>
+     {% endif%}
+     <!-- ===============-->
+    <form  method="POST">
+    <div class="container">   
+        {% csrf_token %}
+         <fieldset>
+            <div class="mb-3">
+                <label for="txa" class="form-label"> Observacion</label>
+                <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder="descripcion" multiple>
+              </div>
+            
+           <div class="mb-3">
+            <label for="txtcosto" class="form-label"> Precio</label>
+            <input type="text" name="precio" id="precio" class="form-control" placeholder="precio" >
+          </div>
+         </fieldset>
+  </div>
+  <button type="submit" class="btn btn-primary" >Guardar</button>
+</form>
+{% endblock %}

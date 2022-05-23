@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes pdf</title>
+</head>
+<body>
+    <table border="1">
+        <tbody >
+            <tr >
+                <td rowspan="5" width="20%">
+                    <img src="https://i.pinimg.com/474x/c1/5b/e2/c15be2c62961ad37577a4ae17af24c1c.jpg" width="150" height="150">
+                </td>
+                <td align="center">EMPRESA TRANSPORTADORA DE CARGA PESADA</td>
+            </tr>
+            <tr>
+                <td align="center">Conf&iacute;e en Nosotros! </td>
+            </tr>
+            <tr>
+                <td align="center">Barranquilla Atlantico-Colombia</td>
+            </tr>
+            <tr>
+                <td align="center">Telefonos: +57301252523 - 6053698752</td>
+            </tr>
+            <tr>
+                <td align="center">www.transporcar.com</td>
+            </tr>
+        </tbody>
+    </table>
+    {% block contenido %}
+
+    {% endblock %}
+    <footer>
+        <hr>
+        Impreso por: {{user.username}}, fecha: 
+    </footer>
+</body>
+</html>

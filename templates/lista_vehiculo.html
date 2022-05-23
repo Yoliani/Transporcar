@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+{% block contenido %}
+{% if msg %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Mensaje:</strong> {{msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+{% endif %}
+
+<table class="table table-striped table-hover">
+    <thead>
+     <tr>
+         <th>PLACA</th>
+         <th>MODELO</th>
+         <th>MARCA</th>
+         <th>CAPACIDAD</th>
+         <th>ACCIONES</th>
+     </tr>
+    </thead>
+    <tbody>
+        {% for reg in vehiculos %}
+        <tr>
+            <td>{{reg.placa}}</td>
+            <td>{{reg.modelo}}</td>
+            <td>{{reg.marca}}</td>
+            <td>{{reg.capacidad}}</td>
+            <td>
+                <a href="/delete-vehiculo/{{reg.id}}" role="button" class="btn btn-danger"> 
+                    Eliminar
+                </a>
+               Editar
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>PLACA</th>
+            <th>MODELO</th>
+            <th>MARCA</th>
+            <th>CAPACIDAD</th>
+            <th>ACCIONES</th>
+        </tr>
+    </tfoot>
+</table>
+{% endblock %}

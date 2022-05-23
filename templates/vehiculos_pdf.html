@@ -1,0 +1,29 @@
+{% extends 'headerpdf.html' %}
+{% block contenido %}
+<h1>Listado de Veh&iacute;culos</h1>
+<hr>
+<table border="1">
+    <thead>
+     <tr>
+         <th>ID</th>
+         <th>PLACA</th>
+         <th>MODELO</th>
+         <th>MARCA</th>
+         <th>CAPACIDAD</th>
+         <th>USUARIO</th>
+     </tr>   
+    </thead>
+    <tbody>
+        {% for reg in vehiculos %}
+        <tr>
+           <td>{{reg.id}}</td> 
+           <td>{{reg.placa}}</td> 
+           <td>{{reg.modelo}}</td> 
+           <td>{{reg.marca}}</td> 
+           <td>{{reg.capacidad}}</td> 
+           <td>{{reg.usuario}}</td> 
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
